@@ -1,0 +1,19 @@
+{
+  "name": "soy-php/codesniffer-task",
+  "description": "Code Sniffer task for Soy",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rick Kuipers",
+      "email": "io@rskuipers.com"
+    }
+  ],
+  "require": {
+    "soy-php/soy": "dev-develop"
+  },
+  "autoload": {
+    "psr-4": {
+      "Soy\\CodeSniffer\\": "src/Soy/CodeSniffer/"
+    }
+  }
+}
