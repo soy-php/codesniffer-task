@@ -10,6 +10,7 @@ $recipe->component('phpcs', function (\Soy\CodeSniffer\CodeSnifferTask $codeSnif
         ->setVerbose(true)
         ->setThrowExceptionOnError(false)
         ->addIgnorePattern('**/*Task.php')
+        ->addExtension('php')
         ->setReport(\Soy\CodeSniffer\CodeSnifferTask::REPORT_FULL)
         ->setShowSniffs(true)
         ->run();
