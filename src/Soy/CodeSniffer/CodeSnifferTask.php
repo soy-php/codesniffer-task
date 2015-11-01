@@ -66,6 +66,11 @@ class CodeSnifferTask extends AbstractCliTask
     /**
      * @var array
      */
+    protected $extensions = [];
+
+    /**
+     * @var array
+     */
     protected $flags = [];
 
     /**
@@ -77,6 +82,7 @@ class CodeSnifferTask extends AbstractCliTask
             . (count($this->getIgnorePatterns()) > 0
                 ? '--ignore=' . implode(',', $this->getIgnorePatterns()) . ' '
                 : '')
+            . (count($this->getExtensions()) > 0 ? '--extensions=' . implode(',', $this->getExtensions()) . ' ' : '')
             . '--report=' . $this->getReport() . ' '
             . ($this->getReportFile() !== null ? '--report-file=' . $this->getReportFile() . ' ' : '')
             . ($this->shouldShowSniffs() === true ? '-s ' : '')
@@ -209,6 +215,34 @@ class CodeSnifferTask extends AbstractCliTask
     public function setShowSniffs($showSniffs)
     {
         $this->showSniffs = $showSniffs;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    public function getExtensions()
+    {
+        return $this->extensions;
+    }
+
+    /**
+     * @param string $extension
+     * @return $this
+     */
+    public function addExtension($extension)
+    {
+        $this->extensions[] = $extension;
+        return $this;
+    }
+
+    /**
+     * @param array $extensions
+     * @return $this
+     */
+    public function setExtensions(array $extensions)
+    {
+        $this->extensions = $extensions;
         return $this;
     }
 
