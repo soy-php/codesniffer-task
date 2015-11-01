@@ -20,6 +20,14 @@ class CodeSnifferTask extends AbstractCliTask
     const REPORT_HGBLAME = 'hgblame';
     const REPORT_NOTIFYSEND = 'notifysend';
 
+    const STANDARD_MY_SOURCE = 'MySource';
+    const STANDARD_PEAR = 'PEAR';
+    const STANDARD_PHPCS = 'PHPCS';
+    const STANDARD_PSR1 = 'PSR1';
+    const STANDARD_PSR2 = 'PSR2';
+    const STANDARD_SQUIZ = 'Squiz';
+    const STANDARD_ZEND = 'Zend';
+
     /**
      * @var string
      */
@@ -28,7 +36,12 @@ class CodeSnifferTask extends AbstractCliTask
     /**
      * @var string
      */
-    protected $standard = 'PSR2';
+    protected $standard = self::STANDARD_PSR2;
+
+    /**
+     * @var string
+     */
+    protected $report = self::REPORT_FULL;
 
     /**
      * @var array
@@ -39,11 +52,6 @@ class CodeSnifferTask extends AbstractCliTask
      * @var array
      */
     protected $ignorePatterns = [];
-
-    /**
-     * @var string
-     */
-    protected $report = self::REPORT_FULL;
 
     /**
      * @var string
