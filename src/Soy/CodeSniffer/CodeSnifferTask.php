@@ -2,9 +2,9 @@
 
 namespace Soy\CodeSniffer;
 
-use Soy\Task\AbstractCliTask;
+use Soy\Task\CliTask;
 
-class CodeSnifferTask extends AbstractCliTask
+class CodeSnifferTask extends CliTask
 {
     const REPORT_FULL = 'full';
     const REPORT_XML = 'xml';
@@ -69,16 +69,11 @@ class CodeSnifferTask extends AbstractCliTask
     protected $extensions = [];
 
     /**
-     * @var array
-     */
-    protected $flags = [];
-
-    /**
      * @return string
      */
-    public function getBinary()
+    public function getCommand()
     {
-        return parent::getBinary() . ' --standard=' . $this->getStandard() . ' '
+        return $this->getBinary() . ' --standard=' . $this->getStandard() . ' '
             . (count($this->getIgnorePatterns()) > 0
                 ? '--ignore=' . implode(',', $this->getIgnorePatterns()) . ' '
                 : '')
@@ -86,7 +81,7 @@ class CodeSnifferTask extends AbstractCliTask
             . '--report=' . $this->getReport() . ' '
             . ($this->getReportFile() !== null ? '--report-file=' . $this->getReportFile() . ' ' : '')
             . ($this->shouldShowSniffs() === true ? '-s ' : '')
-            . (count($this->flags) > 0 ? implode(' ', $this->getFlags()) : '')
+            . (count($this->arguments) > 0 ? implode(' ', $this->getArguments()) . ' ' : '')
             . implode(' ', $this->getTargets());
     }
 
@@ -243,34 +238,6 @@ class CodeSnifferTask extends AbstractCliTask
     public function setExtensions(array $extensions)
     {
         $this->extensions = $extensions;
-        return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getFlags()
-    {
-        return $this->flags;
-    }
-
-    /**
-     * @param string $flag
-     * @return $this
-     */
-    public function addFlag($flag)
-    {
-        $this->flags[] = $flag;
-        return $this;
-    }
-
-    /**
-     * @param array $flags
-     * @return CodeSnifferTask
-     */
-    public function setFlags(array $flags)
-    {
-        $this->flags = $flags;
         return $this;
     }
 }

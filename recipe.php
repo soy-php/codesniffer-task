@@ -2,7 +2,7 @@
 
 $recipe = new \Soy\Recipe();
 
-$recipe->component('phpcs', function (\Soy\CodeSniffer\CodeSnifferTask $codeSnifferTask) {
+$recipe->component('default', function (\Soy\CodeSniffer\CodeSnifferTask $codeSnifferTask) {
     $codeSnifferTask
         ->setBinary('phpcs')
         ->addTarget('src/Soy')
@@ -15,7 +15,5 @@ $recipe->component('phpcs', function (\Soy\CodeSniffer\CodeSnifferTask $codeSnif
         ->setShowSniffs(true)
         ->run();
 });
-
-$recipe->component('default', null, ['phpcs']);
 
 return $recipe;
