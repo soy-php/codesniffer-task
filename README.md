@@ -1,4 +1,4 @@
-# Code Sniffer Task
+# PHP Code Sniffer Task
 
 [![Latest Stable Version](https://poser.pugx.org/soy-php/phpcs-task/v/stable)](https://packagist.org/packages/soy-php/phpcs-task) [![Total Downloads](https://poser.pugx.org/soy-php/phpcs-task/downloads)](https://packagist.org/packages/soy-php/phpcs-task) [![Latest Unstable Version](https://poser.pugx.org/soy-php/phpcs-task/v/unstable)](https://packagist.org/packages/soy-php/phpcs-task) [![License](https://poser.pugx.org/soy-php/phpcs-task/license)](https://packagist.org/packages/soy-php/phpcs-task)
 
