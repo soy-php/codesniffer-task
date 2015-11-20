@@ -4,7 +4,7 @@ namespace Soy\CodeSniffer;
 
 use Soy\Task\CliTask;
 
-class CodeSnifferTask extends CliTask
+class RunTask extends CliTask
 {
     const REPORT_FULL = 'full';
     const REPORT_XML = 'xml';
