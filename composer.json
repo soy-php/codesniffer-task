@@ -9,11 +9,16 @@
     }
   ],
   "require": {
-    "soy-php/soy": "0.1.*"
+    "soy-php/soy": ">=0.1.0"
   },
   "autoload": {
     "psr-4": {
       "Soy\\CodeSniffer\\": "src/Soy/CodeSniffer/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "0.2.x-dev"
     }
   }
 }
