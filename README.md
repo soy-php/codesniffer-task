@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/soy-php/codesniffer-task/v/stable)](https://packagist.org/packages/soy-php/codesniffer-task) [![Total Downloads](https://poser.pugx.org/soy-php/codesniffer-task/downloads)](https://packagist.org/packages/soy-php/codesniffer-task) [![Latest Unstable Version](https://poser.pugx.org/soy-php/codesniffer-task/v/unstable)](https://packagist.org/packages/soy-php/codesniffer-task) [![License](https://poser.pugx.org/soy-php/codesniffer-task/license)](https://packagist.org/packages/soy-php/codesniffer-task)
 
 ## Introduction
-This is a [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer) task for Soy
+This is a [PHP Code Sniffer](https://github.com/squizlabs/PHP_CodeSniffer) task for [Soy](https://github.com/soy-php/soy)
 
 ## Usage
 Include `soy-php/codesniffer-task` in your project with composer:
