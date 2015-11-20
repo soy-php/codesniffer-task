@@ -1,6 +1,6 @@
 <?php
 
-namespace Soy\CodeSniffer;
+namespace Soy\PhpCodeSniffer;
 
 use Soy\Task\CliTask;
 

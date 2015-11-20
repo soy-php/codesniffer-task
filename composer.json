@@ -1,6 +1,6 @@
 {
-  "name": "soy-php/codesniffer-task",
-  "description": "Code Sniffer task for Soy",
+  "name": "soy-php/phpcs-task",
+  "description": "PHP Code Sniffer task for Soy",
   "license": "MIT",
   "authors": [
     {
@@ -13,7 +13,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Soy\\CodeSniffer\\": "src/Soy/CodeSniffer/"
+      "Soy\\PhpCodeSniffer\\": "src/Soy/PhpCodeSniffer/"
     }
   },
   "extra": {
